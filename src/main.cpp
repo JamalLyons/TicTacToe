@@ -4,7 +4,7 @@
 static constexpr int FPS = 30;
 static constexpr int window_w = 800;
 static constexpr int window_h = 450;
-static auto window_title = "A super fun game of Tic Tac Toe";
+static auto window_title = "CodingWithJamal - Tic Tac Toe";
 
 enum GameState {
     MENU,
