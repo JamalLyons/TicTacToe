@@ -65,16 +65,24 @@ int main() {
         ClearBackground(RAYWHITE);
 
         // Game state logic
-        if (game.currentState == MENU) {
-            draw_menu();
-            if (IsKeyPressed(KEY_ENTER)) {
-                game.currentState = PLAYING;
-            }
+        switch (game.currentState) {
+            case MENU:
+                draw_menu();
+                if (IsKeyPressed(KEY_ENTER)) {
+                    game.currentState = PLAYING;
+                }
+            break;
+
+            case PLAYING:
+                draw_board();
+                // (Gameplay logic will go here)
+            break;
+
+            case GAME_OVER:
+                // (Game over screen logic will go here)
+                    break;
         }
-        else if (game.currentState == PLAYING) {
-            draw_board();
-            // (Gameplay logic will go here)
-        }
+
 
         EndDrawing();
     }
