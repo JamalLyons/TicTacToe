@@ -26,7 +26,7 @@ endif()
 
 # Our Project
 
-add_executable(TicTacToe src/main.cpp
+add_executable(TicTacToe WIN32 src/main.cpp
         src/main.h
 )
 
